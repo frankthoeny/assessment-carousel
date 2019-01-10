@@ -1,0 +1,35 @@
+// Responsive Mixins
+
+// Breakpoints
+$ipad-pro-portrait-breakpoint:  "(min-device-width : 1024px) and
+                                 (max-device-width : 1024px) and
+                                 (min-device-height : 1366px) and
+                                 (max-device-height : 1366px) and
+                                 (min-width: 1024px) and (max-width: 1024px)";
+
+$ipad-pro-landscape-breakpoint: "(min-device-width : 1366px) and
+                                  (max-device-width : 1366px) and
+                                  (min-device-height : 1024px) and
+                                  (max-device-height : 1024px) and
+                                  (min-width: 1366px) and (max-width: 1366px)";
+
+
+// iPad Pro Mixins
+@mixin ipad-pro-portrait {
+   @media only screen and #{$ipad-pro-portrait-breakpoint} {
+     .cards__ipad-pro-portrait {
+        flex: 0 0 100%!important;
+        max-width: 100%!important;
+        margin-bottom: 2rem;
+      }
+   }
+}
+
+@mixin ipad-pro-landscape {
+   @media only screen and #{$ipad-pro-landscape-breakpoint} {
+      .ipad-pro {
+        flex: 0 0 100%!important;
+        max-width: 100%!important;
+      }
+   }
+}
