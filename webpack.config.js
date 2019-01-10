@@ -1,15 +1,21 @@
-import webpack from 'webpack';
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import LiveReloadPlugin from 'webpack-livereload-plugin'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+// import webpack from 'webpack';
+// import path from 'path';
+// import HtmlWebpackPlugin from 'html-webpack-plugin'
+// import LiveReloadPlugin from 'webpack-livereload-plugin'
+// import CopyWebpackPlugin from 'copy-webpack-plugin'
+// import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const LiveReloadPlugin = require('webpack-livereload-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
-export default  {
-  mode: 'development',
+module.exports = {
+mode: 'none',
   entry: './src/index.js',
   output: {
-    path: '/',
+    path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   module: {

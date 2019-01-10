@@ -4,7 +4,8 @@
   "description": "this is an assessment test.",
   "main": "src/index.js",
   "scripts": {
-    "start": "node start.js"
+    "start": "node start.js",
+    "build": "webpack --open"
   },
   "repository": {
     "type": "git",
@@ -42,6 +43,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.1",
+    "webpack-cli": "^3.2.1",
     "webpack-dev-middleware": "^3.5.0",
     "webpack-dev-server": "^3.1.14",
     "webpack-livereload-plugin": "^2.2.0"
